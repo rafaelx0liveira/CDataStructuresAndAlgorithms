@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "*.ejs": "html",
+        ".fantomasignore": "ignore",
+        "linked_list.h": "c",
+        "stdio.h": "c",
+        "malloc.h": "c"
+    }
+}
