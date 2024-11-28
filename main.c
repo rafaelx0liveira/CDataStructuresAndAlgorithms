@@ -1,7 +1,7 @@
 #include <stdio.h> 
 #include <stdbool.h>
 #include <stdlib.h>
-#include "linked_list.h"
+#include "structures/lists/linked_list.h"
 #include <malloc.h>
 
 void PrintList(LinkedList* linkedList){

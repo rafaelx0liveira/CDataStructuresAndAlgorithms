@@ -36,7 +36,6 @@ void AddNodeAtEnd(LinkedList* linkedList, unsigned char data) {
 
 void AddNodeAtStart(LinkedList* linkedList, unsigned char data){
     Node* node = malloc(sizeof(Node));
-    Node* head = linkedList->head;
     
     if(node == NULL) return;
 
