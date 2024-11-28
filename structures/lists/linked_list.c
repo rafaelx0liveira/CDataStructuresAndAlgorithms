@@ -55,7 +55,7 @@ void AddNodeAtStart(LinkedList* linkedList, unsigned char data){
 
 bool RemoveNode(LinkedList* linkedList, unsigned char data) {
     if (linkedList == NULL || linkedList->head == NULL) {
-        return false; // Lista inválida ou vazia
+        return false; 
     }
 
     Node* head = linkedList->head;
@@ -64,11 +64,9 @@ bool RemoveNode(LinkedList* linkedList, unsigned char data) {
     Node* current = linkedList->head;
     Node* previousNode = NULL;
 
-    // Caso o nó procurado seja o head
     if (head->data == data) {
         linkedList->head = head->next;
         if (linkedList->head == NULL) {
-            // Se a lista ficou vazia, atualize o tail também
             linkedList->tail = NULL;
         }
         linkedList->size--;
@@ -76,26 +74,23 @@ bool RemoveNode(LinkedList* linkedList, unsigned char data) {
         return true;
     }
 
-    // Caso o nó procurado seja o tail
     if (tail->data == data) {
-        // Percorre até o penúltimo nó
         while (current->next != tail) {
             current = current->next;
         }
         current->next = NULL;
-        linkedList->tail = current; // Atualiza o tail
+        linkedList->tail = current; 
         linkedList->size--;
         free(tail);
         return true;
     }
 
-    // Remoção de nó do meio
     current = linkedList->head;
     while (current != NULL) {
         if (current->data == data) {
             previousNode->next = current->next;
             if (current == linkedList->tail) {
-                linkedList->tail = previousNode; // Atualiza o tail se o nó removido era o último
+                linkedList->tail = previousNode; 
             }
             free(current);
             linkedList->size--;
@@ -105,7 +100,7 @@ bool RemoveNode(LinkedList* linkedList, unsigned char data) {
         current = current->next;
     }
 
-    return false; // Nó não encontrado
+    return false; 
 }
 
 Node* SearchNode(LinkedList* linkedList, unsigned char data){
@@ -174,6 +169,5 @@ void DestroyLinkedList(LinkedList* linkedList){
     linkedList->head = NULL;
     linkedList->tail = NULL;
     linkedList->size = 0;
-    
 }
 
