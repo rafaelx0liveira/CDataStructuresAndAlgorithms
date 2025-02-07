@@ -1,9 +1,13 @@
 {
     "files.associations": {
+        "*.sqlbook": "sql",
+        "*.ndjson": "jsonl",
+        "*.dbclient-js": "javascript",
         "*.ejs": "html",
         ".fantomasignore": "ignore",
         "linked_list.h": "c",
         "stdio.h": "c",
-        "malloc.h": "c"
+        "malloc.h": "c",
+        "stdbool.h": "c"
     }
 }

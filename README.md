@@ -87,18 +87,18 @@ O repositório é organizado em pastas para facilitar a navegação e separaçã
 ## 🛠️ Como Usar
 
 ### 1. Compilação
-Para compilar as bibliotecas, utilize o GCC:
+Para compilar as bibliotecas, utilize o Makefile:
 
+Na raiz do projeto, digite:
 ```bash
-gcc -c linked_list.c -o linked_list.o
-gcc -c main.c linked_list.o -o main
+mingw32-make
 ```
 
 ### 2. Execução
-Rode o executável gerado:
+Rode o executável gerado na pasta bin:
 
 ```bash
-./main
+.\main
 ```
 
 ---

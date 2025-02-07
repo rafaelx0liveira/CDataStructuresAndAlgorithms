@@ -14,11 +14,23 @@ typedef struct LinkedList{
 } LinkedList;
 
 LinkedList* CreateList();
-Node* SearchNode(LinkedList* linkedList, unsigned char data);
+
 void AddNodeAtStart(LinkedList* linkedList, unsigned char data);
 void AddNodeAtEnd(LinkedList* list, unsigned char data);
+bool AddNodeIfNotExists(LinkedList* linkedList, unsigned char data);
+bool AddNodeAfter(LinkedList* linkedList, unsigned char target, unsigned char data);
+
+Node* SearchNode(LinkedList* linkedList, unsigned char data);
+
 bool RemoveNode(LinkedList* linkedList, unsigned char data);
-bool InsertNodeAfter(LinkedList* linkedList, unsigned char target, unsigned char data);
+void RemoveAllOccurrences(LinkedList* linkedList, unsigned char target);
+void RemoveAllDuplicatesInSortedList(LinkedList* linkedList);
+
+void ChangeNodes(LinkedList* linkedList, Node* node1, Node* node2);
+
+bool IsLinkedListSorted(LinkedList* linkedList);
+bool AreListsEqualUnordered(LinkedList* LinkedList1, LinkedList* LinkedList2);
+
 void DestroyLinkedList(LinkedList* linkedList);
 
 #endif
